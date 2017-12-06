@@ -578,22 +578,22 @@ using namespace std;
     return _recognizedNameLabel;
 }
 
--(UIButton *)copyrightButton {
-    if (_copyrightButton) {
-        return _copyrightButton;
-    }
+// -(UIButton *)copyrightButton {
+//     if (_copyrightButton) {
+//         return _copyrightButton;
+//     }
     
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:10], NSForegroundColorAttributeName: [UIColor colorWithWhite:1 alpha:0.5], NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
+//     NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:10], NSForegroundColorAttributeName: [UIColor colorWithWhite:1 alpha:0.5], NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
     
-    NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Powered by pay.cards", "") attributes:attributes];
+//     NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Powered by pay.cards", "") attributes:attributes];
     
-    _copyrightButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _copyrightButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [_copyrightButton setAttributedTitle:attributedTitle forState:UIControlStateNormal];
-    [_copyrightButton addTarget:self action:@selector(tapCopyright) forControlEvents:UIControlEventTouchUpInside];
+//     _copyrightButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//     _copyrightButton.translatesAutoresizingMaskIntoConstraints = NO;
+//     [_copyrightButton setAttributedTitle:attributedTitle forState:UIControlStateNormal];
+//     [_copyrightButton addTarget:self action:@selector(tapCopyright) forControlEvents:UIControlEventTouchUpInside];
     
-    return _copyrightButton;
-}
+//     return _copyrightButton;
+// }
 
 - (void)tapCopyright {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://pay.cards"] options:@{} completionHandler:^(BOOL success) {
